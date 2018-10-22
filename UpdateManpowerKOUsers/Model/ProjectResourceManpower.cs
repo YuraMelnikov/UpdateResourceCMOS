@@ -32,6 +32,7 @@ namespace UpdateManpowerKOUsers.Model
                     projContext.Load(res);
                     projContext.Load(res.CustomFields);
                     projContext.ExecuteQuery();
+
                     foreach (var dataExcel in dataInExcel)
                     {
                         if (dataExcel.UserName == res.Name)
