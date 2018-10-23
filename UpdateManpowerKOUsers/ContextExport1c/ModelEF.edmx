@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="exportImportModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="planZakaz">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Zakaz" Type="varchar" MaxLength="50" />
+          <Property Name="Otgruzka" Type="date" />
+          <Property Name="Otkr" Type="date" />
+          <Property Name="SSmat" Type="int" />
+          <Property Name="bujetIspoln" Type="int" />
+          <Property Name="bujetProizv" Type="float" />
+          <Property Name="bujetRezerv" Type="float" />
+          <Property Name="obespechenost" Type="float" />
+          <Property Name="SSfact1" Type="float" />
+          <Property Name="bitVipusk" Type="bit" />
+          <Property Name="bitRKD" Type="bit" />
+          <Property Name="startUSS" Type="date" />
+          <Property Name="startEU" Type="date" />
+          <Property Name="OboznacIzdelia" Type="varchar" MaxLength="250" />
+          <Property Name="NaimenovanieIzdelia" Type="varchar" MaxLength="250" />
+          <Property Name="mir" Type="bit" />
+          <Property Name="procentIzmeneniyStoimDeficita" Type="float" />
+          <Property Name="dataRezresheniyaProizvodstva" Type="date" />
+          <Property Name="PVProvedena" Type="bit" />
+          <Property Name="OVProvedena" Type="bit" />
+          <Property Name="SSSDI" Type="float" />
+          <Property Name="SSfact" Type="float" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityContainer Name="exportImportModelStoreContainer">
+          <EntitySet Name="planZakaz" EntityType="Self.planZakaz" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="exportImportModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="planZakaz">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Zakaz" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Otgruzka" Type="DateTime" Precision="0" />
+          <Property Name="Otkr" Type="DateTime" Precision="0" />
+          <Property Name="SSmat" Type="Int32" />
+          <Property Name="bujetIspoln" Type="Int32" />
+          <Property Name="bujetProizv" Type="Double" />
+          <Property Name="bujetRezerv" Type="Double" />
+          <Property Name="obespechenost" Type="Double" />
+          <Property Name="SSfact1" Type="Double" />
+          <Property Name="bitVipusk" Type="Boolean" />
+          <Property Name="bitRKD" Type="Boolean" />
+          <Property Name="startUSS" Type="DateTime" Precision="0" />
+          <Property Name="startEU" Type="DateTime" Precision="0" />
+          <Property Name="OboznacIzdelia" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NaimenovanieIzdelia" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="mir" Type="Boolean" />
+          <Property Name="procentIzmeneniyStoimDeficita" Type="Double" />
+          <Property Name="dataRezresheniyaProizvodstva" Type="DateTime" Precision="0" />
+          <Property Name="PVProvedena" Type="Boolean" />
+          <Property Name="OVProvedena" Type="Boolean" />
+          <Property Name="SSSDI" Type="Double" />
+          <Property Name="SSfact" Type="Double" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityContainer Name="exportImportEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="planZakaz" EntityType="Self.planZakaz" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="exportImportModelStoreContainer" CdmEntityContainer="exportImportEntities">
+          <EntitySetMapping Name="planZakaz">
+            <EntityTypeMapping TypeName="exportImportModel.planZakaz">
+              <MappingFragment StoreEntitySet="planZakaz">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Zakaz" ColumnName="Zakaz" />
+                <ScalarProperty Name="Otgruzka" ColumnName="Otgruzka" />
+                <ScalarProperty Name="Otkr" ColumnName="Otkr" />
+                <ScalarProperty Name="SSmat" ColumnName="SSmat" />
+                <ScalarProperty Name="bujetIspoln" ColumnName="bujetIspoln" />
+                <ScalarProperty Name="bujetProizv" ColumnName="bujetProizv" />
+                <ScalarProperty Name="bujetRezerv" ColumnName="bujetRezerv" />
+                <ScalarProperty Name="obespechenost" ColumnName="obespechenost" />
+                <ScalarProperty Name="SSfact1" ColumnName="SSfact1" />
+                <ScalarProperty Name="bitVipusk" ColumnName="bitVipusk" />
+                <ScalarProperty Name="bitRKD" ColumnName="bitRKD" />
+                <ScalarProperty Name="startUSS" ColumnName="startUSS" />
+                <ScalarProperty Name="startEU" ColumnName="startEU" />
+                <ScalarProperty Name="OboznacIzdelia" ColumnName="OboznacIzdelia" />
+                <ScalarProperty Name="NaimenovanieIzdelia" ColumnName="NaimenovanieIzdelia" />
+                <ScalarProperty Name="mir" ColumnName="mir" />
+                <ScalarProperty Name="procentIzmeneniyStoimDeficita" ColumnName="procentIzmeneniyStoimDeficita" />
+                <ScalarProperty Name="dataRezresheniyaProizvodstva" ColumnName="dataRezresheniyaProizvodstva" />
+                <ScalarProperty Name="PVProvedena" ColumnName="PVProvedena" />
+                <ScalarProperty Name="OVProvedena" ColumnName="OVProvedena" />
+                <ScalarProperty Name="SSSDI" ColumnName="SSSDI" />
+                <ScalarProperty Name="SSfact" ColumnName="SSfact" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
