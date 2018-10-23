@@ -14,19 +14,20 @@ namespace UpdateManpowerKOUsers.Model
         {
             projContext.Load(projContext.Projects);
             projContext.ExecuteQuery();
-            foreach (PublishedProject pubProj in projContext.Projects)
+            foreach (PublishedProject pubProj in projContext.Projects.Where(d => d.PercentComplete < 100))
             {
-                DraftProject projectDraft = pubProj.CheckOut();
-                try
+                if (pubProj.Name.Length == pubProj.Name.Replace("PCAM", "").Length)
                 {
-                    projectDraft.Name += GetRSAMName(Convert.ToInt32(projectDraft.Name.Substring(0, 4)));
+                    try
+                    {
+                        string rsamName = GetRSAMName(Convert.ToInt32(pubProj.Name.Substring(0, 4)));
+                        DraftProject projectDraft = pubProj.CheckOut();
+                        projectDraft.Name += rsamName;
+                        QueueJob job = projectDraft.Update();
+                        job = projectDraft.Publish(true);
+                    }
+                    catch { }
                 }
-                catch 
-                {
-
-                }
-                QueueJob job = projectDraft.Update();
-                job = projectDraft.Publish(true);
             }
         }
 
