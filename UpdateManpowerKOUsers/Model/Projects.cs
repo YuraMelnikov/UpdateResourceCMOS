@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using Microsoft.ProjectServer.Client;
 using UpdateManpowerKOUsers.ContextExport1c;
@@ -14,15 +15,27 @@ namespace UpdateManpowerKOUsers.Model
         {
             projContext.Load(projContext.Projects);
             projContext.ExecuteQuery();
-            foreach (PublishedProject pubProj in projContext.Projects.Where(d => d.PercentComplete < 100))
+            foreach (var pubProj in projContext.Projects)
             {
-                if (pubProj.Name.Length == pubProj.Name.Replace("PCAM", "").Length)
+                int planZakazNumber = 0;
+                try
+                {
+                    planZakazNumber = Convert.ToInt32(pubProj.Name.Substring(0, 4));
+                }
+                catch
+                {
+                }
+
+                if (planZakazNumber > 1156 && planZakazNumber > 0 && pubProj.Name.Length == pubProj.Name.Replace("PCAM", "").Length && GetVipusk(planZakazNumber) == false)
                 {
                     try
                     {
                         string rsamName = GetRSAMName(Convert.ToInt32(pubProj.Name.Substring(0, 4)));
                         DraftProject projectDraft = pubProj.CheckOut();
-                        projectDraft.Name += rsamName;
+                        projContext.Load(projectDraft);
+                        projContext.ExecuteQuery();
+                        projectDraft.Name += "   " + rsamName.Replace("_", "-");
+                        Console.WriteLine(projectDraft.Name);
                         QueueJob job = projectDraft.Update();
                         job = projectDraft.Publish(true);
                     }
@@ -34,8 +47,29 @@ namespace UpdateManpowerKOUsers.Model
         private string GetRSAMName(int numberPlanZakaz)
         {
             string nameRSAM = "";
-            nameRSAM = _db.planZakaz.First(d => d.Zakaz == numberPlanZakaz.ToString())?.OboznacIzdelia.Replace(" ", "");
+            try
+            {
+                nameRSAM = _db.planZakaz.First(d => d.Zakaz == numberPlanZakaz.ToString())?.OboznacIzdelia.Replace(" ", "");
+            }
+            catch
+            {
+
+            }
             return nameRSAM;
+        }
+
+        private bool GetVipusk(int numberPlanZakaz)
+        {
+            bool vipusk = true;
+            try
+            {
+                vipusk = (bool) _db.planZakaz.First(d => d.Zakaz == numberPlanZakaz.ToString())?.bitVipusk;
+            }
+            catch
+            {
+                vipusk = true;
+            }
+            return vipusk;
         }
     }
 }
