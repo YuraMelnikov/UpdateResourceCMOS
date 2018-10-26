@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.Entity;
 using System.Linq;
 using Microsoft.ProjectServer.Client;
 using UpdateManpowerKOUsers.ContextExport1c;
@@ -9,8 +8,7 @@ namespace UpdateManpowerKOUsers.Model
     class Projects : ContextProject
     {
         exportImportEntities _db = new exportImportEntities();
-
-
+        
         public void SetPSAMInProjectName()
         {
             projContext.Load(projContext.Projects);
@@ -25,16 +23,20 @@ namespace UpdateManpowerKOUsers.Model
                 catch
                 {
                 }
+                string rsamName = "";
+                if (planZakazNumber > 0)
+                {
+                    rsamName = GetRSAMName(planZakazNumber).Replace("_", "-");
+                }
 
-                if (planZakazNumber > 1156 && planZakazNumber > 0 && pubProj.Name.Length == pubProj.Name.Replace("PCAM", "").Length && GetVipusk(planZakazNumber) == false)
+                if (planZakazNumber > 1156 && rsamName != "" && pubProj.Name.Length == pubProj.Name.Replace("PCAM", "").Length && GetVipusk(planZakazNumber) == false)
                 {
                     try
                     {
-                        string rsamName = GetRSAMName(Convert.ToInt32(pubProj.Name.Substring(0, 4)));
                         DraftProject projectDraft = pubProj.CheckOut();
                         projContext.Load(projectDraft);
                         projContext.ExecuteQuery();
-                        projectDraft.Name += "   " + rsamName.Replace("_", "-");
+                        projectDraft.Name += "   " + rsamName;
                         Console.WriteLine(projectDraft.Name);
                         QueueJob job = projectDraft.Update();
                         job = projectDraft.Publish(true);
