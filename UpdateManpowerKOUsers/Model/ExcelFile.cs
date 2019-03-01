@@ -1,7 +1,5 @@
-﻿using Microsoft.ProjectServer.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace UpdateManpowerKOUsers.Model
@@ -32,11 +30,11 @@ namespace UpdateManpowerKOUsers.Model
                 {
                     row++;
                 }
-                for (int i = 0; i < 13; i++)
+                for (int i = 0; i < 12; i++)
                 {
                     try
                     {
-                        DataInExcel.Add(new DataInExcel(Convert.ToDouble(ObjWorkSheet.Cells[row, column].Text), DateTime.Now.AddMonths(i - 1).Month, textData));
+                        DataInExcel.Add(new DataInExcel(Convert.ToDouble(ObjWorkSheet.Cells[row, column].Text), DateTime.Now.AddMonths(i).Month, textData));
                         Console.WriteLine();
                     }
                     catch
