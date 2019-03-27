@@ -12,6 +12,7 @@ namespace UpdateManpowerKOUsers
             projectResourceManpower.UpdateManpower();
             Projects prj = new Projects();
             prj.SetPSAMInProjectName();
+            prj.UpdateCriticalDateClose();
         }
     }
 }
