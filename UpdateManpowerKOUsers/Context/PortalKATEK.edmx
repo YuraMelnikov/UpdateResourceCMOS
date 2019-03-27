@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PortalKATEKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PZ_PlanZakaz">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlanZakaz" Type="int" Nullable="false" />
+          <Property Name="DateCreate" Type="date" Nullable="false" />
+          <Property Name="MTR" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="OL" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Zapros" Type="int" Nullable="false" />
+          <Property Name="DateSupply" Type="date" Nullable="false" />
+          <Property Name="DateShipping" Type="date" Nullable="false" />
+          <Property Name="Cost" Type="float" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" Nullable="false" />
+          <Property Name="ProductType" Type="int" Nullable="false" />
+          <Property Name="Dostavka" Type="int" Nullable="false" />
+          <Property Name="Manager" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Client" Type="int" Nullable="false" />
+          <Property Name="Gruzopoluchatel" Type="varchar(max)" Nullable="false" />
+          <Property Name="PostAdresGruzopoluchatel" Type="varchar(max)" Nullable="false" />
+          <Property Name="INNGruzopoluchatel" Type="varchar(max)" Nullable="false" />
+          <Property Name="OKPOGruzopoluchatelya" Type="varchar(max)" Nullable="false" />
+          <Property Name="KodGruzopoluchatela" Type="varchar(max)" Nullable="false" />
+          <Property Name="StantionGruzopoluchatel" Type="varchar(max)" Nullable="false" />
+          <Property Name="KodStanciiGruzopoluchatelya" Type="varchar(max)" Nullable="false" />
+          <Property Name="OsobieOtmetkiGruzopoluchatelya" Type="varchar(max)" Nullable="false" />
+          <Property Name="DescriptionGruzopoluchatel" Type="varchar(max)" Nullable="false" />
+          <Property Name="Folder" Type="varchar(max)" Nullable="false" />
+          <Property Name="PowerST" Type="varchar(max)" Nullable="false" />
+          <Property Name="VN/NN" Type="varchar(max)" Nullable="false" />
+          <Property Name="Modul" Type="varchar(max)" Nullable="false" />
+          <Property Name="timeContract" Type="varchar(max)" Nullable="false" />
+          <Property Name="timeContractDate" Type="date" />
+          <Property Name="timeArr" Type="varchar(max)" Nullable="false" />
+          <Property Name="timeArrDate" Type="date" />
+          <Property Name="id_PZ_FIO" Type="int" Nullable="false" />
+          <Property Name="numZakupki" Type="varchar(max)" Nullable="false" />
+          <Property Name="numLota" Type="varchar(max)" Nullable="false" />
+          <Property Name="dataOtgruzkiBP" Type="date" Nullable="false" />
+          <Property Name="ProjectUID" Type="uniqueidentifier" />
+          <Property Name="nameTU" Type="varchar(max)" Nullable="false" />
+          <Property Name="TypeShip" Type="int" Nullable="false" />
+          <Property Name="criticalDateShip" Type="date" />
+          <Property Name="id_PZ_OperatorDogovora" Type="int" Nullable="false" />
+          <Property Name="costPNR" Type="float" Nullable="false" />
+          <Property Name="costSMR" Type="float" Nullable="false" />
+          <Property Name="nomenklaturNumber" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PortalKATEKModelStoreContainer">
+          <EntitySet Name="PZ_PlanZakaz" EntityType="Self.PZ_PlanZakaz" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PortalKATEKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PZ_PlanZakaz">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlanZakaz" Type="Int32" Nullable="false" />
+          <Property Name="DateCreate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MTR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zapros" Type="Int32" Nullable="false" />
+          <Property Name="DateSupply" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateShipping" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Cost" Type="Double" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProductType" Type="Int32" Nullable="false" />
+          <Property Name="Dostavka" Type="Int32" Nullable="false" />
+          <Property Name="Manager" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Client" Type="Int32" Nullable="false" />
+          <Property Name="Gruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PostAdresGruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="INNGruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OKPOGruzopoluchatelya" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KodGruzopoluchatela" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StantionGruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KodStanciiGruzopoluchatelya" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OsobieOtmetkiGruzopoluchatelya" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DescriptionGruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Folder" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PowerST" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VN_NN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Modul" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="timeContract" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="timeContractDate" Type="DateTime" Precision="0" />
+          <Property Name="timeArr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="timeArrDate" Type="DateTime" Precision="0" />
+          <Property Name="id_PZ_FIO" Type="Int32" Nullable="false" />
+          <Property Name="numZakupki" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="numLota" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dataOtgruzkiBP" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ProjectUID" Type="Guid" />
+          <Property Name="nameTU" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TypeShip" Type="Int32" Nullable="false" />
+          <Property Name="criticalDateShip" Type="DateTime" Precision="0" />
+          <Property Name="id_PZ_OperatorDogovora" Type="Int32" Nullable="false" />
+          <Property Name="costPNR" Type="Double" Nullable="false" />
+          <Property Name="costSMR" Type="Double" Nullable="false" />
+          <Property Name="nomenklaturNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PortalKATEKEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PZ_PlanZakaz" EntityType="Self.PZ_PlanZakaz" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PortalKATEKModelStoreContainer" CdmEntityContainer="PortalKATEKEntities">
+          <EntitySetMapping Name="PZ_PlanZakaz">
+            <EntityTypeMapping TypeName="PortalKATEKModel.PZ_PlanZakaz">
+              <MappingFragment StoreEntitySet="PZ_PlanZakaz">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PlanZakaz" ColumnName="PlanZakaz" />
+                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+                <ScalarProperty Name="MTR" ColumnName="MTR" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OL" ColumnName="OL" />
+                <ScalarProperty Name="Zapros" ColumnName="Zapros" />
+                <ScalarProperty Name="DateSupply" ColumnName="DateSupply" />
+                <ScalarProperty Name="DateShipping" ColumnName="DateShipping" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="Dostavka" ColumnName="Dostavka" />
+                <ScalarProperty Name="Manager" ColumnName="Manager" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Gruzopoluchatel" ColumnName="Gruzopoluchatel" />
+                <ScalarProperty Name="PostAdresGruzopoluchatel" ColumnName="PostAdresGruzopoluchatel" />
+                <ScalarProperty Name="INNGruzopoluchatel" ColumnName="INNGruzopoluchatel" />
+                <ScalarProperty Name="OKPOGruzopoluchatelya" ColumnName="OKPOGruzopoluchatelya" />
+                <ScalarProperty Name="KodGruzopoluchatela" ColumnName="KodGruzopoluchatela" />
+                <ScalarProperty Name="StantionGruzopoluchatel" ColumnName="StantionGruzopoluchatel" />
+                <ScalarProperty Name="KodStanciiGruzopoluchatelya" ColumnName="KodStanciiGruzopoluchatelya" />
+                <ScalarProperty Name="OsobieOtmetkiGruzopoluchatelya" ColumnName="OsobieOtmetkiGruzopoluchatelya" />
+                <ScalarProperty Name="DescriptionGruzopoluchatel" ColumnName="DescriptionGruzopoluchatel" />
+                <ScalarProperty Name="Folder" ColumnName="Folder" />
+                <ScalarProperty Name="PowerST" ColumnName="PowerST" />
+                <ScalarProperty Name="VN_NN" ColumnName="VN/NN" />
+                <ScalarProperty Name="Modul" ColumnName="Modul" />
+                <ScalarProperty Name="timeContract" ColumnName="timeContract" />
+                <ScalarProperty Name="timeContractDate" ColumnName="timeContractDate" />
+                <ScalarProperty Name="timeArr" ColumnName="timeArr" />
+                <ScalarProperty Name="timeArrDate" ColumnName="timeArrDate" />
+                <ScalarProperty Name="id_PZ_FIO" ColumnName="id_PZ_FIO" />
+                <ScalarProperty Name="numZakupki" ColumnName="numZakupki" />
+                <ScalarProperty Name="numLota" ColumnName="numLota" />
+                <ScalarProperty Name="dataOtgruzkiBP" ColumnName="dataOtgruzkiBP" />
+                <ScalarProperty Name="ProjectUID" ColumnName="ProjectUID" />
+                <ScalarProperty Name="nameTU" ColumnName="nameTU" />
+                <ScalarProperty Name="TypeShip" ColumnName="TypeShip" />
+                <ScalarProperty Name="criticalDateShip" ColumnName="criticalDateShip" />
+                <ScalarProperty Name="id_PZ_OperatorDogovora" ColumnName="id_PZ_OperatorDogovora" />
+                <ScalarProperty Name="costPNR" ColumnName="costPNR" />
+                <ScalarProperty Name="costSMR" ColumnName="costSMR" />
+                <ScalarProperty Name="nomenklaturNumber" ColumnName="nomenklaturNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

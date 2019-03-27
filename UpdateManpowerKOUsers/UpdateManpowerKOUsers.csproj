@@ -81,6 +81,24 @@
     <Compile Include="ContextExport1c\planZakaz.cs">
       <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Context\PortalKATEK.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortalKATEK.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\PortalKATEK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\PortalKATEK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortalKATEK.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Context\PZ_PlanZakaz.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\ContextProject.cs" />
     <Compile Include="Model\DataInExcel.cs" />
     <Compile Include="Model\ExcelFile.cs" />
@@ -98,6 +116,13 @@
     <None Include="ContextExport1c\ModelEF.edmx.diagram">
       <DependentUpon>ModelEF.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Context\PortalKATEK.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PortalKATEK.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Context\PortalKATEK.edmx.diagram">
+      <DependentUpon>PortalKATEK.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +135,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelEF.edmx</DependentUpon>
       <LastGenOutput>ModelEF.cs</LastGenOutput>
+    </Content>
+    <Content Include="Context\PortalKATEK.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PortalKATEK.edmx</DependentUpon>
+      <LastGenOutput>PortalKATEK.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Context\PortalKATEK.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PortalKATEK.edmx</DependentUpon>
+      <LastGenOutput>PortalKATEK.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
