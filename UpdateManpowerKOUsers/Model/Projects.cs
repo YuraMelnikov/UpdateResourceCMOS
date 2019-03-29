@@ -92,24 +92,28 @@ namespace UpdateManpowerKOUsers.Model
                 {
 
                 }
-                if (planZakazNumber != 0)
+                if (planZakazNumber != 0 && planZakazNumber > 1760)
                 {
                     try
                     {
+                        Console.WriteLine("Update: {0}",planZakazNumber);
                         PZ_PlanZakaz pZ_PlanZakaz = _dbPortal.PZ_PlanZakaz.First(d => d.PlanZakaz == planZakazNumber);
                         if (pZ_PlanZakaz.dataOtgruzkiBP > DateTime.Now)
                         {
-                            DateTime criticalDateClose = _dbPortal.PZ_PlanZakaz.First(d => d.PlanZakaz == planZakazNumber).DateShipping;
+                            DateTime criticalDateClose = _dbPortal.PZ_PlanZakaz.First(d => d.PlanZakaz == planZakazNumber).DateSupply;
                             DraftProject projectDraft = pubProj.CheckOut();
                             projContext.Load(projectDraft);
                             projContext.Load(projectDraft.CustomFields);
                             projContext.ExecuteQuery();
                             CustomField cField = projContext.CustomFields.First(c => c.Name == "CriticalDateClose");
-                            projectDraft[cField.InternalName] = criticalDateClose;
-                            projectDraft.Update();
-                            QueueJob job = projectDraft.Update();
-                            job = projectDraft.Publish(true);
-                            projContext.ExecuteQuery();
+                            if(Convert.ToDateTime(cField.InternalName) != criticalDateClose)
+                            {
+                                projectDraft[cField.InternalName] = criticalDateClose;
+                                projectDraft.Update();
+                                QueueJob job = projectDraft.Update();
+                                job = projectDraft.Publish(true);
+                                projContext.ExecuteQuery();
+                            }
                         }
                     }
                     catch
