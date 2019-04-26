@@ -92,7 +92,7 @@ namespace UpdateManpowerKOUsers.Model
                 {
 
                 }
-                if (planZakazNumber != 0 && planZakazNumber > 1760)
+                if (planZakazNumber != 0 && planZakazNumber > 1734)
                 {
                     try
                     {

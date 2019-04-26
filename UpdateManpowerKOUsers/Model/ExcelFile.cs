@@ -24,11 +24,14 @@ namespace UpdateManpowerKOUsers.Model
             textData = ObjWorkSheet.Cells[row, column].Text.ToString();
             while (textData != "")
             {
+                Console.WriteLine(textData);
                 row += 2;
                 column += 1;
                 while (ObjWorkSheet.Cells[row, column].Text.ToString() == "")
                 {
                     row++;
+                    if (row > 1000)
+                        break;
                 }
                 for (int i = 0; i < 12; i++)
                 {
