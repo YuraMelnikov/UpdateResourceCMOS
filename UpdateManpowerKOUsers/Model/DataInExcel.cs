@@ -1,4 +1,6 @@
-﻿namespace UpdateManpowerKOUsers
+﻿using System;
+
+namespace UpdateManpowerKOUsers
 {
     class DataInExcel
     {
@@ -15,6 +17,7 @@
             Data = data;
             Month = month;
             UserName = userName;
+            Console.WriteLine("{0} | {1} | {2}", Data, Month, UserName);
         }
     }
 }
