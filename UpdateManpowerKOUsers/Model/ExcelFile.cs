@@ -6,8 +6,8 @@ namespace UpdateManpowerKOUsers.Model
 {
     class ExcelFile
     {
-        string pathFileRP = "M:\\Katek\\Pror&D\\Archive\\Предразработка\\Прогноз по выработке нормо-часов.xlsm";
-        string nameListExcel = "Расчет коэф. КБМ";
+        readonly string pathFileRP = "M:\\Katek\\Pror&D\\Archive\\Предразработка\\Прогноз по выработке нормо-часов.xlsm";
+        readonly string nameListExcel = "Расчет коэф. КБМ";
         List<DataInExcel> dataInExcel = new List<DataInExcel>();
         Excel.Application ObjWorkExcel = new Excel.Application();
 
@@ -69,11 +69,13 @@ namespace UpdateManpowerKOUsers.Model
             int year = DateTime.Now.Year;
             for (int i = 0; i < 12; i++)
             {
-                array[i] = new DataExcel();
-                array[i].UserName = userName;
-                array[i].Month = year + "." + GeMonthLongString(month);
-                array[i].Data = 0.0;
-                array[i].NumberMonth = month;
+                array[i] = new DataExcel
+                {
+                    UserName = userName,
+                    Month = year + "." + GeMonthLongString(month),
+                    Data = 0.0,
+                    NumberMonth = month
+                };
                 month++;
                 if (month == 13)
                 {
