@@ -5,8 +5,6 @@ namespace UpdateManpowerKOUsers
 {
     class Program
     {
-        private static Timer aTimer;
-
         static void Main(string[] args)
         {
             Projects prj = new Projects();
