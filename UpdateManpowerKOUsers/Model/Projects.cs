@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.ProjectServer.Client;
 using UpdateManpowerKOUsers.ContextExport1c;
 using UpdateManpowerKOUsers.Context;
+using System.Net;
 
 namespace UpdateManpowerKOUsers.Model
 {
@@ -78,6 +79,15 @@ namespace UpdateManpowerKOUsers.Model
 
         public void UpdateCriticalDateClose()
         {
+
+            NetworkCredential cred = new NetworkCredential();
+            cred.Domain = "KATEK";
+            cred.UserName = "myi";
+            cred.Password = "123qweASD";
+
+            projContext.Credentials = cred;
+
+
             projContext.Load(projContext.Projects);
             projContext.Load(projContext.CustomFields);
             projContext.ExecuteQuery();
@@ -106,19 +116,16 @@ namespace UpdateManpowerKOUsers.Model
                             projContext.Load(projectDraft.CustomFields);
                             projContext.ExecuteQuery();
                             CustomField cField = projContext.CustomFields.First(c => c.Name == "CriticalDateClose");
-                            if(Convert.ToDateTime(cField.InternalName) != criticalDateClose)
-                            {
-                                projectDraft[cField.InternalName] = criticalDateClose;
-                                projectDraft.Update();
-                                QueueJob job = projectDraft.Update();
-                                job = projectDraft.Publish(true);
-                                projContext.ExecuteQuery();
-                            }
+                            projectDraft[cField.InternalName] = criticalDateClose;
+                            projectDraft.Update();
+                            QueueJob job = projectDraft.Update();
+                            job = projectDraft.Publish(true);
+                            projContext.ExecuteQuery();
                         }
                     }
-                    catch
+                    catch (Exception ex)
                     {
-
+                        Console.WriteLine(ex.Message);
                     }
                 }
             }
