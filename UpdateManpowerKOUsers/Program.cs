@@ -1,5 +1,4 @@
-﻿using System.Timers;
-using UpdateManpowerKOUsers.Model;
+﻿using UpdateManpowerKOUsers.Model;
 
 namespace UpdateManpowerKOUsers
 {
@@ -14,6 +13,7 @@ namespace UpdateManpowerKOUsers
             ProjectResourceManpower projectResourceManpower = new ProjectResourceManpower(excelFile.DataInExcel);
             projectResourceManpower.UpdateManpower();
             prj.UpdateCriticalDateClose();
+            new NewBP();
         }
     }
 }

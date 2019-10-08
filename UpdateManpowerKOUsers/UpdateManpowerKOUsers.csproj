@@ -654,10 +654,15 @@
     <Compile Include="Model\ContextProject.cs" />
     <Compile Include="Model\DataInExcel.cs" />
     <Compile Include="Model\ExcelFile.cs" />
+    <Compile Include="Model\HssPlan.cs" />
     <Compile Include="Model\NewBP.cs" />
     <Compile Include="Model\ProjectResourceManpower.cs" />
     <Compile Include="Model\Projects.cs" />
     <Compile Include="Model\ProjectsList.cs" />
+    <Compile Include="Model\RatePlan.cs" />
+    <Compile Include="Model\RemainingHSS.cs" />
+    <Compile Include="Model\TasksList.cs" />
+    <Compile Include="Model\TEOData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
