@@ -14,7 +14,8 @@ namespace UpdateManpowerKOUsers.Model
                 var tasksBPList = db.ProjectTask.AsNoTracking().Where(d => d.isActiveBP).ToList();
                 foreach (ProjectTask dataBP in tasksBPList)
                 {
-                    if (db.PWA_TasksForBP.AsNoTracking().Where(d => d.TaskWBS == dataBP.id_TASK_WBS && d.ProjectUID == projectUID).Count() > 0)
+                    int counterCorrect = db.PWA_TasksForBP.AsNoTracking().Where(d => d.TaskWBS == dataBP.id_TASK_WBS && d.ProjectUID == projectUID).Count();
+                    if (counterCorrect > 0)
                     {
                         PWA_TasksForBP taskPWA = db.PWA_TasksForBP.AsNoTracking().First(d => d.TaskWBS == dataBP.id_TASK_WBS && d.ProjectUID == projectUID);
                         DashboardBP_TasksList task = new DashboardBP_TasksList

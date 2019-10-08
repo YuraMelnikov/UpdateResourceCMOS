@@ -13,7 +13,7 @@ namespace UpdateManpowerKOUsers
             ProjectResourceManpower projectResourceManpower = new ProjectResourceManpower(excelFile.DataInExcel);
             projectResourceManpower.UpdateManpower();
             prj.UpdateCriticalDateClose();
-            new NewBP();
+            //new NewBP();
         }
     }
 }
