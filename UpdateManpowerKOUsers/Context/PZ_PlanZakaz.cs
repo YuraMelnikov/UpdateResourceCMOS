@@ -14,6 +14,31 @@ namespace UpdateManpowerKOUsers.Context
     
     public partial class PZ_PlanZakaz
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PZ_PlanZakaz()
+        {
+            this.CMO_PositionOrder = new HashSet<CMO_PositionOrder>();
+            this.CMO_PositionPreOrder = new HashSet<CMO_PositionPreOrder>();
+            this.CMO2_Position = new HashSet<CMO2_Position>();
+            this.DashboardBP_HSSPO = new HashSet<DashboardBP_HSSPO>();
+            this.DashboardBP_ProjectList = new HashSet<DashboardBP_ProjectList>();
+            this.DashboardTV_FinishWorkInStartWeek = new HashSet<DashboardTV_FinishWorkInStartWeek>();
+            this.Debit_CostUpdate = new HashSet<Debit_CostUpdate>();
+            this.Debit_Platform = new HashSet<Debit_Platform>();
+            this.Debit_WorkBit = new HashSet<Debit_WorkBit>();
+            this.DebitReclamation = new HashSet<DebitReclamation>();
+            this.MailGraphic = new HashSet<MailGraphic>();
+            this.PlanVerificationItems = new HashSet<PlanVerificationItems>();
+            this.PZ_PZNotes = new HashSet<PZ_PZNotes>();
+            this.PZ_Setup = new HashSet<PZ_Setup>();
+            this.PZ_TEO = new HashSet<PZ_TEO>();
+            this.Reclamation_CloseOrder = new HashSet<Reclamation_CloseOrder>();
+            this.Reclamation_PZ = new HashSet<Reclamation_PZ>();
+            this.RKD_Order = new HashSet<RKD_Order>();
+            this.SandwichPanel_PZ = new HashSet<SandwichPanel_PZ>();
+            this.ServiceRemarksPlanZakazs = new HashSet<ServiceRemarksPlanZakazs>();
+        }
+    
         public int Id { get; set; }
         public int PlanZakaz { get; set; }
         public System.DateTime DateCreate { get; set; }
@@ -58,5 +83,53 @@ namespace UpdateManpowerKOUsers.Context
         public double costPNR { get; set; }
         public double costSMR { get; set; }
         public string nomenklaturNumber { get; set; }
+    
+        public virtual AspNetUsers AspNetUsers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMO_PositionOrder> CMO_PositionOrder { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMO_PositionPreOrder> CMO_PositionPreOrder { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMO2_Position> CMO2_Position { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DashboardBP_HSSPO> DashboardBP_HSSPO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DashboardBP_ProjectList> DashboardBP_ProjectList { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DashboardTV_FinishWorkInStartWeek> DashboardTV_FinishWorkInStartWeek { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Debit_CostUpdate> Debit_CostUpdate { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Debit_Platform> Debit_Platform { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Debit_WorkBit> Debit_WorkBit { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DebitReclamation> DebitReclamation { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MailGraphic> MailGraphic { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PlanVerificationItems> PlanVerificationItems { get; set; }
+        public virtual PZ_Client PZ_Client { get; set; }
+        public virtual PZ_Dostavka PZ_Dostavka { get; set; }
+        public virtual PZ_FIO PZ_FIO { get; set; }
+        public virtual PZ_OperatorDogovora PZ_OperatorDogovora { get; set; }
+        public virtual PZ_ProductType PZ_ProductType { get; set; }
+        public virtual PZ_TypeShip PZ_TypeShip { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PZ_PZNotes> PZ_PZNotes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PZ_Setup> PZ_Setup { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PZ_TEO> PZ_TEO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reclamation_CloseOrder> Reclamation_CloseOrder { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reclamation_PZ> Reclamation_PZ { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RKD_Order> RKD_Order { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SandwichPanel_PZ> SandwichPanel_PZ { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ServiceRemarksPlanZakazs> ServiceRemarksPlanZakazs { get; set; }
     }
 }
