@@ -5411,84 +5411,7 @@ warning 6002: The table/view 'PortalKATEK.dbo.vw_aspnet_WebPartState_User' does 
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PortalKATEKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="PZ_PlanZakaz">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PlanZakaz" Type="Int32" Nullable="false" />
-          <Property Name="DateCreate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="MTR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="OL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Zapros" Type="Int32" Nullable="false" />
-          <Property Name="DateSupply" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DateShipping" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Cost" Type="Double" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ProductType" Type="Int32" Nullable="false" />
-          <Property Name="Dostavka" Type="Int32" Nullable="false" />
-          <Property Name="Manager" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Client" Type="Int32" Nullable="false" />
-          <Property Name="Gruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PostAdresGruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="INNGruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="OKPOGruzopoluchatelya" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KodGruzopoluchatela" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="StantionGruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KodStanciiGruzopoluchatelya" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="OsobieOtmetkiGruzopoluchatelya" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="DescriptionGruzopoluchatel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Folder" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PowerST" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="VN_NN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Modul" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="timeContract" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="timeContractDate" Type="DateTime" Precision="0" />
-          <Property Name="timeArr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="timeArrDate" Type="DateTime" Precision="0" />
-          <Property Name="id_PZ_FIO" Type="Int32" Nullable="false" />
-          <Property Name="numZakupki" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="numLota" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dataOtgruzkiBP" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="ProjectUID" Type="Guid" />
-          <Property Name="nameTU" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TypeShip" Type="Int32" Nullable="false" />
-          <Property Name="criticalDateShip" Type="DateTime" Precision="0" />
-          <Property Name="id_PZ_OperatorDogovora" Type="Int32" Nullable="false" />
-          <Property Name="costPNR" Type="Double" Nullable="false" />
-          <Property Name="costSMR" Type="Double" Nullable="false" />
-          <Property Name="nomenklaturNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="AspNetUsers" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_AspNetUsers" FromRole="PZ_PlanZakaz" ToRole="AspNetUsers" />
-          <NavigationProperty Name="CMO_PositionOrder" Relationship="PortalKATEKModel.FK_CMO_PositionOrder_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="CMO_PositionOrder" />
-          <NavigationProperty Name="CMO_PositionPreOrder" Relationship="PortalKATEKModel.FK_CMO_PositionPreOrder_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="CMO_PositionPreOrder" />
-          <NavigationProperty Name="CMO2_Position" Relationship="PortalKATEKModel.FK_CMO2_Position_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="CMO2_Position" />
-          <NavigationProperty Name="DashboardBP_HSSPO" Relationship="PortalKATEKModel.FK_DashboardBP_HSSPO_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="DashboardBP_HSSPO" />
-          <NavigationProperty Name="DashboardBP_ProjectList" Relationship="PortalKATEKModel.FK_DashboardBP_ProjectList_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="DashboardBP_ProjectList" />
-          <NavigationProperty Name="DashboardTV_FinishWorkInStartWeek" Relationship="PortalKATEKModel.FK_DashboardTV_FinishWorkInStartWeek_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="DashboardTV_FinishWorkInStartWeek" />
-          <NavigationProperty Name="Debit_CostUpdate" Relationship="PortalKATEKModel.FK_Debit_CostUpdate_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Debit_CostUpdate" />
-          <NavigationProperty Name="Debit_Platform" Relationship="PortalKATEKModel.FK_Debit_Platform_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Debit_Platform" />
-          <NavigationProperty Name="Debit_WorkBit" Relationship="PortalKATEKModel.FK_debit_WorkBit_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Debit_WorkBit" />
-          <NavigationProperty Name="DebitReclamation" Relationship="PortalKATEKModel.FK_DebitReclamation_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="DebitReclamation" />
-          <NavigationProperty Name="MailGraphic" Relationship="PortalKATEKModel.FK_MailGraphic_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="MailGraphic" />
-          <NavigationProperty Name="PlanVerificationItems" Relationship="PortalKATEKModel.FK_PlanVerificationItems_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="PlanVerificationItems" />
-          <NavigationProperty Name="PZ_Client" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_Client" FromRole="PZ_PlanZakaz" ToRole="PZ_Client" />
-          <NavigationProperty Name="PZ_Dostavka" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_Dostavka" FromRole="PZ_PlanZakaz" ToRole="PZ_Dostavka" />
-          <NavigationProperty Name="PZ_FIO" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_FIO" FromRole="PZ_PlanZakaz" ToRole="PZ_FIO" />
-          <NavigationProperty Name="PZ_OperatorDogovora" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_OperatorDogovora" FromRole="PZ_PlanZakaz" ToRole="PZ_OperatorDogovora" />
-          <NavigationProperty Name="PZ_ProductType" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_ProductType" FromRole="PZ_PlanZakaz" ToRole="PZ_ProductType" />
-          <NavigationProperty Name="PZ_TypeShip" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_TypeShip" FromRole="PZ_PlanZakaz" ToRole="PZ_TypeShip" />
-          <NavigationProperty Name="PZ_PZNotes" Relationship="PortalKATEKModel.FK_PZ_PZNotes_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="PZ_PZNotes" />
-          <NavigationProperty Name="PZ_Setup" Relationship="PortalKATEKModel.FK_PZ_Setup_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="PZ_Setup" />
-          <NavigationProperty Name="PZ_TEO" Relationship="PortalKATEKModel.FK_PZ_TEO_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="PZ_TEO" />
-          <NavigationProperty Name="Reclamation_CloseOrder" Relationship="PortalKATEKModel.FK_Reclamation_CloseOrder_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Reclamation_CloseOrder" />
-          <NavigationProperty Name="Reclamation_PZ" Relationship="PortalKATEKModel.FK_Reclamation_PZ_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Reclamation_PZ" />
-          <NavigationProperty Name="RKD_Order" Relationship="PortalKATEKModel.FK_RKD_Order_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="RKD_Order" />
-          <NavigationProperty Name="SandwichPanel_PZ" Relationship="PortalKATEKModel.FK_SandwichPanel_PZ_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="SandwichPanel_PZ" />
-          <NavigationProperty Name="ServiceRemarksPlanZakazs" Relationship="PortalKATEKModel.FK_ServiceRemarksPlanZakazs_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="ServiceRemarksPlanZakazs" />
-        </EntityType>
         <EntityContainer Name="PortalKATEKEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="PZ_PlanZakaz" EntityType="Self.PZ_PlanZakaz" />
           <EntitySet Name="C__MigrationHistory" EntityType="PortalKATEKModel.C__MigrationHistory" />
           <EntitySet Name="AspNetRoles" EntityType="PortalKATEKModel.AspNetRoles" />
           <EntitySet Name="AspNetUserClaims" EntityType="PortalKATEKModel.AspNetUserClaims" />
@@ -5572,6 +5495,7 @@ warning 6002: The table/view 'PortalKATEK.dbo.vw_aspnet_WebPartState_User' does 
           <EntitySet Name="PZ_FIO" EntityType="PortalKATEKModel.PZ_FIO" />
           <EntitySet Name="PZ_Notes" EntityType="PortalKATEKModel.PZ_Notes" />
           <EntitySet Name="PZ_OperatorDogovora" EntityType="PortalKATEKModel.PZ_OperatorDogovora" />
+          <EntitySet Name="PZ_PlanZakaz" EntityType="PortalKATEKModel.PZ_PlanZakaz" />
           <EntitySet Name="PZ_ProductType" EntityType="PortalKATEKModel.PZ_ProductType" />
           <EntitySet Name="PZ_PZNotes" EntityType="PortalKATEKModel.PZ_PZNotes" />
           <EntitySet Name="PZ_Setup" EntityType="PortalKATEKModel.PZ_Setup" />
@@ -7288,6 +7212,82 @@ warning 6002: The table/view 'PortalKATEK.dbo.vw_aspnet_WebPartState_User' does 
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="PZ_PlanZakaz" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_OperatorDogovora" FromRole="PZ_OperatorDogovora" ToRole="PZ_PlanZakaz" />
+        </EntityType>
+        <EntityType Name="PZ_PlanZakaz">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlanZakaz" Type="Int32" Nullable="false" />
+          <Property Name="DateCreate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MTR" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OL" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Zapros" Type="Int32" Nullable="false" />
+          <Property Name="DateSupply" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateShipping" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Cost" Type="Double" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProductType" Type="Int32" Nullable="false" />
+          <Property Name="Dostavka" Type="Int32" Nullable="false" />
+          <Property Name="Manager" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Client" Type="Int32" Nullable="false" />
+          <Property Name="Gruzopoluchatel" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PostAdresGruzopoluchatel" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="INNGruzopoluchatel" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OKPOGruzopoluchatelya" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="KodGruzopoluchatela" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="StantionGruzopoluchatel" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="KodStanciiGruzopoluchatelya" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OsobieOtmetkiGruzopoluchatelya" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DescriptionGruzopoluchatel" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Folder" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PowerST" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="VN_NN" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Modul" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="timeContract" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="timeContractDate" Type="DateTime" Precision="0" />
+          <Property Name="timeArr" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="timeArrDate" Type="DateTime" Precision="0" />
+          <Property Name="id_PZ_FIO" Type="Int32" Nullable="false" />
+          <Property Name="numZakupki" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="numLota" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="dataOtgruzkiBP" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ProjectUID" Type="Guid" />
+          <Property Name="nameTU" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TypeShip" Type="Int32" Nullable="false" />
+          <Property Name="criticalDateShip" Type="DateTime" Precision="0" />
+          <Property Name="id_PZ_OperatorDogovora" Type="Int32" Nullable="false" />
+          <Property Name="costPNR" Type="Double" Nullable="false" />
+          <Property Name="costSMR" Type="Double" Nullable="false" />
+          <Property Name="nomenklaturNumber" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_AspNetUsers" FromRole="PZ_PlanZakaz" ToRole="AspNetUsers" />
+          <NavigationProperty Name="CMO_PositionOrder" Relationship="PortalKATEKModel.FK_CMO_PositionOrder_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="CMO_PositionOrder" />
+          <NavigationProperty Name="CMO_PositionPreOrder" Relationship="PortalKATEKModel.FK_CMO_PositionPreOrder_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="CMO_PositionPreOrder" />
+          <NavigationProperty Name="CMO2_Position" Relationship="PortalKATEKModel.FK_CMO2_Position_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="CMO2_Position" />
+          <NavigationProperty Name="DashboardBP_HSSPO" Relationship="PortalKATEKModel.FK_DashboardBP_HSSPO_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="DashboardBP_HSSPO" />
+          <NavigationProperty Name="DashboardBP_ProjectList" Relationship="PortalKATEKModel.FK_DashboardBP_ProjectList_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="DashboardBP_ProjectList" />
+          <NavigationProperty Name="DashboardTV_FinishWorkInStartWeek" Relationship="PortalKATEKModel.FK_DashboardTV_FinishWorkInStartWeek_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="DashboardTV_FinishWorkInStartWeek" />
+          <NavigationProperty Name="Debit_CostUpdate" Relationship="PortalKATEKModel.FK_Debit_CostUpdate_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Debit_CostUpdate" />
+          <NavigationProperty Name="Debit_Platform" Relationship="PortalKATEKModel.FK_Debit_Platform_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Debit_Platform" />
+          <NavigationProperty Name="Debit_WorkBit" Relationship="PortalKATEKModel.FK_debit_WorkBit_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Debit_WorkBit" />
+          <NavigationProperty Name="DebitReclamation" Relationship="PortalKATEKModel.FK_DebitReclamation_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="DebitReclamation" />
+          <NavigationProperty Name="MailGraphic" Relationship="PortalKATEKModel.FK_MailGraphic_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="MailGraphic" />
+          <NavigationProperty Name="PlanVerificationItems" Relationship="PortalKATEKModel.FK_PlanVerificationItems_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="PlanVerificationItems" />
+          <NavigationProperty Name="PZ_Client" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_Client" FromRole="PZ_PlanZakaz" ToRole="PZ_Client" />
+          <NavigationProperty Name="PZ_Dostavka" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_Dostavka" FromRole="PZ_PlanZakaz" ToRole="PZ_Dostavka" />
+          <NavigationProperty Name="PZ_FIO" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_FIO" FromRole="PZ_PlanZakaz" ToRole="PZ_FIO" />
+          <NavigationProperty Name="PZ_OperatorDogovora" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_OperatorDogovora" FromRole="PZ_PlanZakaz" ToRole="PZ_OperatorDogovora" />
+          <NavigationProperty Name="PZ_ProductType" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_ProductType" FromRole="PZ_PlanZakaz" ToRole="PZ_ProductType" />
+          <NavigationProperty Name="PZ_TypeShip" Relationship="PortalKATEKModel.FK_PZ_PlanZakaz_PZ_TypeShip" FromRole="PZ_PlanZakaz" ToRole="PZ_TypeShip" />
+          <NavigationProperty Name="PZ_PZNotes" Relationship="PortalKATEKModel.FK_PZ_PZNotes_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="PZ_PZNotes" />
+          <NavigationProperty Name="PZ_Setup" Relationship="PortalKATEKModel.FK_PZ_Setup_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="PZ_Setup" />
+          <NavigationProperty Name="PZ_TEO" Relationship="PortalKATEKModel.FK_PZ_TEO_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="PZ_TEO" />
+          <NavigationProperty Name="Reclamation_CloseOrder" Relationship="PortalKATEKModel.FK_Reclamation_CloseOrder_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Reclamation_CloseOrder" />
+          <NavigationProperty Name="Reclamation_PZ" Relationship="PortalKATEKModel.FK_Reclamation_PZ_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="Reclamation_PZ" />
+          <NavigationProperty Name="RKD_Order" Relationship="PortalKATEKModel.FK_RKD_Order_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="RKD_Order" />
+          <NavigationProperty Name="SandwichPanel_PZ" Relationship="PortalKATEKModel.FK_SandwichPanel_PZ_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="SandwichPanel_PZ" />
+          <NavigationProperty Name="ServiceRemarksPlanZakazs" Relationship="PortalKATEKModel.FK_ServiceRemarksPlanZakazs_PZ_PlanZakaz" FromRole="PZ_PlanZakaz" ToRole="ServiceRemarksPlanZakazs" />
         </EntityType>
         <EntityType Name="PZ_ProductType">
           <Key>
@@ -10354,62 +10354,12 @@ warning 6002: The table/view 'PortalKATEK.dbo.vw_aspnet_WebPartState_User' does 
           <End Type="PortalKATEKModel.AspNetRoles" Role="AspNetRoles" Multiplicity="*" />
           <End Type="PortalKATEKModel.AspNetUsers" Role="AspNetUsers" Multiplicity="*" />
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="PortalKATEKModelStoreContainer" CdmEntityContainer="PortalKATEKEntities">
-          <EntitySetMapping Name="PZ_PlanZakaz">
-            <EntityTypeMapping TypeName="PortalKATEKModel.PZ_PlanZakaz">
-              <MappingFragment StoreEntitySet="PZ_PlanZakaz">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="PlanZakaz" ColumnName="PlanZakaz" />
-                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
-                <ScalarProperty Name="MTR" ColumnName="MTR" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="OL" ColumnName="OL" />
-                <ScalarProperty Name="Zapros" ColumnName="Zapros" />
-                <ScalarProperty Name="DateSupply" ColumnName="DateSupply" />
-                <ScalarProperty Name="DateShipping" ColumnName="DateShipping" />
-                <ScalarProperty Name="Cost" ColumnName="Cost" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
-                <ScalarProperty Name="Dostavka" ColumnName="Dostavka" />
-                <ScalarProperty Name="Manager" ColumnName="Manager" />
-                <ScalarProperty Name="Client" ColumnName="Client" />
-                <ScalarProperty Name="Gruzopoluchatel" ColumnName="Gruzopoluchatel" />
-                <ScalarProperty Name="PostAdresGruzopoluchatel" ColumnName="PostAdresGruzopoluchatel" />
-                <ScalarProperty Name="INNGruzopoluchatel" ColumnName="INNGruzopoluchatel" />
-                <ScalarProperty Name="OKPOGruzopoluchatelya" ColumnName="OKPOGruzopoluchatelya" />
-                <ScalarProperty Name="KodGruzopoluchatela" ColumnName="KodGruzopoluchatela" />
-                <ScalarProperty Name="StantionGruzopoluchatel" ColumnName="StantionGruzopoluchatel" />
-                <ScalarProperty Name="KodStanciiGruzopoluchatelya" ColumnName="KodStanciiGruzopoluchatelya" />
-                <ScalarProperty Name="OsobieOtmetkiGruzopoluchatelya" ColumnName="OsobieOtmetkiGruzopoluchatelya" />
-                <ScalarProperty Name="DescriptionGruzopoluchatel" ColumnName="DescriptionGruzopoluchatel" />
-                <ScalarProperty Name="Folder" ColumnName="Folder" />
-                <ScalarProperty Name="PowerST" ColumnName="PowerST" />
-                <ScalarProperty Name="VN_NN" ColumnName="VN/NN" />
-                <ScalarProperty Name="Modul" ColumnName="Modul" />
-                <ScalarProperty Name="timeContract" ColumnName="timeContract" />
-                <ScalarProperty Name="timeContractDate" ColumnName="timeContractDate" />
-                <ScalarProperty Name="timeArr" ColumnName="timeArr" />
-                <ScalarProperty Name="timeArrDate" ColumnName="timeArrDate" />
-                <ScalarProperty Name="id_PZ_FIO" ColumnName="id_PZ_FIO" />
-                <ScalarProperty Name="numZakupki" ColumnName="numZakupki" />
-                <ScalarProperty Name="numLota" ColumnName="numLota" />
-                <ScalarProperty Name="dataOtgruzkiBP" ColumnName="dataOtgruzkiBP" />
-                <ScalarProperty Name="ProjectUID" ColumnName="ProjectUID" />
-                <ScalarProperty Name="nameTU" ColumnName="nameTU" />
-                <ScalarProperty Name="TypeShip" ColumnName="TypeShip" />
-                <ScalarProperty Name="criticalDateShip" ColumnName="criticalDateShip" />
-                <ScalarProperty Name="id_PZ_OperatorDogovora" ColumnName="id_PZ_OperatorDogovora" />
-                <ScalarProperty Name="costPNR" ColumnName="costPNR" />
-                <ScalarProperty Name="costSMR" ColumnName="costSMR" />
-                <ScalarProperty Name="nomenklaturNumber" ColumnName="nomenklaturNumber" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="C__MigrationHistory">
             <EntityTypeMapping TypeName="PortalKATEKModel.C__MigrationHistory">
               <MappingFragment StoreEntitySet="__MigrationHistory">
@@ -11406,6 +11356,56 @@ warning 6002: The table/view 'PortalKATEK.dbo.vw_aspnet_WebPartState_User' does 
               <MappingFragment StoreEntitySet="PZ_OperatorDogovora">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PZ_PlanZakaz">
+            <EntityTypeMapping TypeName="PortalKATEKModel.PZ_PlanZakaz">
+              <MappingFragment StoreEntitySet="PZ_PlanZakaz">
+                <ScalarProperty Name="nomenklaturNumber" ColumnName="nomenklaturNumber" />
+                <ScalarProperty Name="costSMR" ColumnName="costSMR" />
+                <ScalarProperty Name="costPNR" ColumnName="costPNR" />
+                <ScalarProperty Name="id_PZ_OperatorDogovora" ColumnName="id_PZ_OperatorDogovora" />
+                <ScalarProperty Name="criticalDateShip" ColumnName="criticalDateShip" />
+                <ScalarProperty Name="TypeShip" ColumnName="TypeShip" />
+                <ScalarProperty Name="nameTU" ColumnName="nameTU" />
+                <ScalarProperty Name="ProjectUID" ColumnName="ProjectUID" />
+                <ScalarProperty Name="dataOtgruzkiBP" ColumnName="dataOtgruzkiBP" />
+                <ScalarProperty Name="numLota" ColumnName="numLota" />
+                <ScalarProperty Name="numZakupki" ColumnName="numZakupki" />
+                <ScalarProperty Name="id_PZ_FIO" ColumnName="id_PZ_FIO" />
+                <ScalarProperty Name="timeArrDate" ColumnName="timeArrDate" />
+                <ScalarProperty Name="timeArr" ColumnName="timeArr" />
+                <ScalarProperty Name="timeContractDate" ColumnName="timeContractDate" />
+                <ScalarProperty Name="timeContract" ColumnName="timeContract" />
+                <ScalarProperty Name="Modul" ColumnName="Modul" />
+                <ScalarProperty Name="VN_NN" ColumnName="VN/NN" />
+                <ScalarProperty Name="PowerST" ColumnName="PowerST" />
+                <ScalarProperty Name="Folder" ColumnName="Folder" />
+                <ScalarProperty Name="DescriptionGruzopoluchatel" ColumnName="DescriptionGruzopoluchatel" />
+                <ScalarProperty Name="OsobieOtmetkiGruzopoluchatelya" ColumnName="OsobieOtmetkiGruzopoluchatelya" />
+                <ScalarProperty Name="KodStanciiGruzopoluchatelya" ColumnName="KodStanciiGruzopoluchatelya" />
+                <ScalarProperty Name="StantionGruzopoluchatel" ColumnName="StantionGruzopoluchatel" />
+                <ScalarProperty Name="KodGruzopoluchatela" ColumnName="KodGruzopoluchatela" />
+                <ScalarProperty Name="OKPOGruzopoluchatelya" ColumnName="OKPOGruzopoluchatelya" />
+                <ScalarProperty Name="INNGruzopoluchatel" ColumnName="INNGruzopoluchatel" />
+                <ScalarProperty Name="PostAdresGruzopoluchatel" ColumnName="PostAdresGruzopoluchatel" />
+                <ScalarProperty Name="Gruzopoluchatel" ColumnName="Gruzopoluchatel" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Manager" ColumnName="Manager" />
+                <ScalarProperty Name="Dostavka" ColumnName="Dostavka" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="DateShipping" ColumnName="DateShipping" />
+                <ScalarProperty Name="DateSupply" ColumnName="DateSupply" />
+                <ScalarProperty Name="Zapros" ColumnName="Zapros" />
+                <ScalarProperty Name="OL" ColumnName="OL" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MTR" ColumnName="MTR" />
+                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+                <ScalarProperty Name="PlanZakaz" ColumnName="PlanZakaz" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

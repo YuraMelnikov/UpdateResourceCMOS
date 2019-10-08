@@ -25,7 +25,6 @@ namespace UpdateManpowerKOUsers.Context
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<PZ_PlanZakaz> PZ_PlanZakaz { get; set; }
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
@@ -109,6 +108,7 @@ namespace UpdateManpowerKOUsers.Context
         public virtual DbSet<PZ_FIO> PZ_FIO { get; set; }
         public virtual DbSet<PZ_Notes> PZ_Notes { get; set; }
         public virtual DbSet<PZ_OperatorDogovora> PZ_OperatorDogovora { get; set; }
+        public virtual DbSet<PZ_PlanZakaz> PZ_PlanZakaz { get; set; }
         public virtual DbSet<PZ_ProductType> PZ_ProductType { get; set; }
         public virtual DbSet<PZ_PZNotes> PZ_PZNotes { get; set; }
         public virtual DbSet<PZ_Setup> PZ_Setup { get; set; }
