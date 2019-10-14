@@ -171,10 +171,10 @@
     <Compile Include="Context\DashboardBP_ProjectList.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\DashboardBP_State.cs">
+    <Compile Include="Context\DashboardBP_ProjectTasks.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\DashboardBP_TasksList.cs">
+    <Compile Include="Context\DashboardBP_State.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\DashboardHSSPlan.cs">
@@ -484,6 +484,9 @@
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\Reclamation_Type.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\RenameTasksKBM.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\RKD_Despatching.cs">

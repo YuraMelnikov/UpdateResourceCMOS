@@ -20,7 +20,7 @@ namespace UpdateManpowerKOUsers.Context
             this.AspNetUserClaims = new HashSet<AspNetUserClaims>();
             this.AspNetUserLogins = new HashSet<AspNetUserLogins>();
             this.CMO2_Order = new HashSet<CMO2_Order>();
-            this.DashboardBP_TasksList = new HashSet<DashboardBP_TasksList>();
+            this.DashboardBP_ProjectTasks = new HashSet<DashboardBP_ProjectTasks>();
             this.DashboardKO_UsersMonthPlan = new HashSet<DashboardKO_UsersMonthPlan>();
             this.PlanVerificationItemsLog = new HashSet<PlanVerificationItemsLog>();
             this.PZ_Notes = new HashSet<PZ_Notes>();
@@ -68,7 +68,7 @@ namespace UpdateManpowerKOUsers.Context
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CMO2_Order> CMO2_Order { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DashboardBP_TasksList> DashboardBP_TasksList { get; set; }
+        public virtual ICollection<DashboardBP_ProjectTasks> DashboardBP_ProjectTasks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DashboardKO_UsersMonthPlan> DashboardKO_UsersMonthPlan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

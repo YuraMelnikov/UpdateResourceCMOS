@@ -78,5 +78,6 @@ namespace UpdateManpowerKOUsers.Context
         public Nullable<System.DateTime> AssignmentBaseline0FinishDate { get; set; }
         public string СДРес_Р { get; set; }
         public Nullable<System.Guid> ResourceUID { get; set; }
+        public Nullable<decimal> НК { get; set; }
     }
 }
