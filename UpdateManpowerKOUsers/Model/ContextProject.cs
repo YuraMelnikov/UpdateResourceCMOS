@@ -1,7 +1,4 @@
 ﻿using Microsoft.ProjectServer.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace UpdateManpowerKOUsers.Model
 {
