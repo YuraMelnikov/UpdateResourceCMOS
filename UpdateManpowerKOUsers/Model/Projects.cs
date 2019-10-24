@@ -126,8 +126,7 @@ namespace UpdateManpowerKOUsers.Model
                 }
             }
         }
-
-
+        
         public void RenameTasks()
         {
             DateTime dateTimeControl = new DateTime(2018, 1, 1);
@@ -155,7 +154,6 @@ namespace UpdateManpowerKOUsers.Model
                 Console.WriteLine(prj.Name);
                 JobState jobState = projContext.WaitForQueue(draft.Publish(true), 20);
             }
-
         }
     }
 }

@@ -14,6 +14,7 @@ namespace UpdateManpowerKOUsers
             ProjectResourceManpower projectResourceManpower = new ProjectResourceManpower(excelFile.DataInExcel);
             projectResourceManpower.UpdateManpower();
             prj.UpdateCriticalDateClose();
+            NewCurencyBYN curencyBYN = new NewCurencyBYN();
         }
     }
 }
