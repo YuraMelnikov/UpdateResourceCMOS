@@ -12,13 +12,9 @@ namespace UpdateManpowerKOUsers.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class CMO_Report_WT
+    public partial class CurencyBYN
     {
-        public int id_CMO_Company { get; set; }
-        public int id_CMO_Tender { get; set; }
-        public int id_CMO_Order { get; set; }
-        public double cost { get; set; }
-        public Nullable<int> day { get; set; }
-        public Nullable<System.DateTime> dateTimeUpload { get; set; }
+        public System.DateTime date { get; set; }
+        public double USD { get; set; }
     }
 }

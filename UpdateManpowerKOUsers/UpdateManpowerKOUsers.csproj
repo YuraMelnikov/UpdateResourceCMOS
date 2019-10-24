@@ -96,7 +96,31 @@
     <Compile Include="Context\Calendar.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
+    <Compile Include="Context\CMKO_BujetList.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CMKO_Optimization.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CMKO_PeriodResult.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
     <Compile Include="Context\CMKO_ProjectFactBujet.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CMKO_TaxCatigories.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CMKO_TaxFact.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CMKO_Teach.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CMKO_ThisPeriod.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CMKO_WorkerResultThisPeriod.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\CMO2_Order.cs">
@@ -132,24 +156,6 @@
     <Compile Include="Context\CMO_PreOrder.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\CMO_Report.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\CMO_Report_FT.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\CMO_Report_Position.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\CMO_Report_ST.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\CMO_Report_WT.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\CMO_Subject.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\CMO_Tender.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
@@ -162,10 +168,13 @@
     <Compile Include="Context\CMO_UploadResult.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\C__MigrationHistory.cs">
+    <Compile Include="Context\CurencyBYN.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\DashboardBP_HSSPO.cs">
+      <DependentUpon>PortalKATEK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\DashboardBP_HSSPOSmall.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\DashboardBP_ProjectList.cs">
@@ -264,9 +273,6 @@
     <Compile Include="Context\Debit_MatchingType.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\Debit_MT.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\Debit_PeriodReportOprih.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
@@ -279,12 +285,6 @@
     <Compile Include="Context\Debit_PostingOnType.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\Debit_Report.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\Debit_SmallReport.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\Debit_TN.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
@@ -294,67 +294,13 @@
     <Compile Include="Context\Devision.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\D_AlertShip.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_AlertShipPost.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_AlertStartMan.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_ClozePZ.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_CMR.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_Contract.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_CostUpdate.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_IPS.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_OprihClose.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_Prototype.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_RassOtgr.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_Register.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_TEO.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_TN.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_UploadCost.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\D_Vagon.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\Folder.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\FolderDocument.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\HSSPO.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\MailGraphic.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\OTKMultiSelectList.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\PF.cs">
@@ -390,9 +336,6 @@
     <Compile Include="Context\ProductionCalendar.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\ProjectMSP_EpmProject_UserView.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\ProjectServer_CreateTasks.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
@@ -409,18 +352,6 @@
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\ProjectTypesLine.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\PWA_EmpProject.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\PWA_EmpTask.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\PWA_EmpTaskAll.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\PWA_TasksForBP.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\PZ_Client.cs">
@@ -528,9 +459,6 @@
     <Compile Include="Context\RKD_Task.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\RKD_TaskUIDProjectUD.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\RKD_TaskVersion.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
@@ -555,9 +483,6 @@
     <Compile Include="Context\SandwichPanel_PZ.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\SCells.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\ServiceRemarks.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
@@ -568,9 +493,6 @@
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\ServiceRemarksCauses.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\ServiceRemarksMinPZ.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\ServiceRemarksPlanZakazs.cs">
@@ -588,9 +510,6 @@
     <Compile Include="Context\TaskForPZ.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\TMP_RKD_UPDATE.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\TypeRKD_Mail_Version.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
@@ -598,45 +517,6 @@
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\UserPO.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\UsersRoles.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\View_RKD_ListDespatching.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\View_RKD_ListMailVersion.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\VV_infPost.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\vw_aspnet_Applications.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\vw_aspnet_MembershipUsers.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\vw_aspnet_Profiles.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\vw_aspnet_Roles.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\vw_aspnet_Users.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\vw_aspnet_UsersInRoles.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\vw_aspnet_WebPartState_Paths.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\vw_aspnet_WebPartState_Shared.cs">
-      <DependentUpon>PortalKATEK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\vw_aspnet_WebPartState_User.cs">
       <DependentUpon>PortalKATEK.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\WBS.cs">
@@ -657,15 +537,8 @@
     <Compile Include="Model\ContextProject.cs" />
     <Compile Include="Model\DataInExcel.cs" />
     <Compile Include="Model\ExcelFile.cs" />
-    <Compile Include="Model\HssPlan.cs" />
-    <Compile Include="Model\NewBP.cs" />
     <Compile Include="Model\ProjectResourceManpower.cs" />
     <Compile Include="Model\Projects.cs" />
-    <Compile Include="Model\ProjectsList.cs" />
-    <Compile Include="Model\RatePlan.cs" />
-    <Compile Include="Model\RemainingHSS.cs" />
-    <Compile Include="Model\TasksList.cs" />
-    <Compile Include="Model\TEOData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -18,6 +18,8 @@ namespace UpdateManpowerKOUsers.Context
         public string period { get; set; }
         public double data { get; set; }
         public string devision { get; set; }
-        public string order { get; set; }
+        public int id_PZ_PlanZakaz { get; set; }
+    
+        public virtual PZ_PlanZakaz PZ_PlanZakaz { get; set; }
     }
 }

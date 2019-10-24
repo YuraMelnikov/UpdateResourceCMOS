@@ -12,9 +12,15 @@ namespace UpdateManpowerKOUsers.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class D_RassOtgr
+    public partial class CMKO_TaxFact
     {
-        public Nullable<System.DateTime> dateClose { get; set; }
-        public int id_PlanZakaz { get; set; }
+        public int id { get; set; }
+        public string id_AspNetUsers { get; set; }
+        public string id_CMKO_PeriodResult { get; set; }
+        public double salary { get; set; }
+        public double tax { get; set; }
+    
+        public virtual AspNetUsers AspNetUsers { get; set; }
+        public virtual CMKO_PeriodResult CMKO_PeriodResult { get; set; }
     }
 }

@@ -130,30 +130,32 @@ namespace UpdateManpowerKOUsers.Model
 
         public void RenameTasks()
         {
+            DateTime dateTimeControl = new DateTime(2018, 1, 1);
             var list = _dbPortal.RenameTasksKBM.ToList();
-
-
-            foreach (var dataList in list)
+            var projCollection = projContext.LoadQuery(projContext.Projects.Where(d => d.CreatedDate > dateTimeControl));
+            projContext.ExecuteQuery();
+            foreach (var prj in projCollection)
             {
-                var projCollection = projContext.LoadQuery(projContext.Projects.Where(p => p.Name == nameProject));
-                projContext.ExecuteQuery();
-                PublishedProject project = projCollection.First();
+                PublishedProject project = prj;
                 DraftProject draft = project.CheckOut();
-                projContext.Load(draft, p => p.StartDate,
-                                    p => p.Description);
-                string taskName = _db.PWA_EmpTaskAll.First(d => d.TaskUID == dataList.TaskUID).TaskName;
-                projContext.Load(draft.Tasks, dt => dt.Where(t => t.Name == taskName));
-                projContext.Load(draft.Assignments, da => da.Where(a => a.Task.Name == taskName));
+                projContext.Load(draft, p => p.Tasks);
                 projContext.ExecuteQuery();
-                DraftTask task = draft.Tasks.First();
-                task.ConstraintType = ConstraintType.MustStartOn;
-                task.ConstraintStartEnd = dataList.ActualStart;
+                if (draft.Tasks.Count > 0)
+                {
+                    foreach (var task in draft.Tasks.ToList())
+                    {
+                        foreach(var baseTask in list)
+                        {
+                            if (baseTask.@base == task.Name)
+                                task.Name = baseTask.@this;
+                        }
+                    }
+                }
                 draft.Update();
-                JobState jobState = context.WaitForQueue(draft.Publish(true), 20);
+                Console.WriteLine(prj.Name);
+                JobState jobState = projContext.WaitForQueue(draft.Publish(true), 20);
             }
 
         }
-
-
     }
 }

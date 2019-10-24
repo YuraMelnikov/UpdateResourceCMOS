@@ -19,6 +19,15 @@ namespace UpdateManpowerKOUsers.Context
         {
             this.AspNetUserClaims = new HashSet<AspNetUserClaims>();
             this.AspNetUserLogins = new HashSet<AspNetUserLogins>();
+            this.CMKO_Optimization = new HashSet<CMKO_Optimization>();
+            this.CMKO_Optimization1 = new HashSet<CMKO_Optimization>();
+            this.CMKO_Optimization2 = new HashSet<CMKO_Optimization>();
+            this.CMKO_TaxFact = new HashSet<CMKO_TaxFact>();
+            this.CMKO_Teach = new HashSet<CMKO_Teach>();
+            this.CMKO_Teach1 = new HashSet<CMKO_Teach>();
+            this.CMKO_Teach2 = new HashSet<CMKO_Teach>();
+            this.CMKO_Teach3 = new HashSet<CMKO_Teach>();
+            this.CMKO_WorkerResultThisPeriod = new HashSet<CMKO_WorkerResultThisPeriod>();
             this.CMO2_Order = new HashSet<CMO2_Order>();
             this.DashboardBP_ProjectTasks = new HashSet<DashboardBP_ProjectTasks>();
             this.DashboardKO_UsersMonthPlan = new HashSet<DashboardKO_UsersMonthPlan>();
@@ -59,12 +68,34 @@ namespace UpdateManpowerKOUsers.Context
         public string CiliricalName { get; set; }
         public Nullable<int> Devision { get; set; }
         public Nullable<System.Guid> ResourceUID { get; set; }
+        public Nullable<int> id_CMKO_TaxCatigories { get; set; }
+        public Nullable<System.DateTime> dateToCMKO { get; set; }
+        public Nullable<double> tax { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AspNetUserClaims> AspNetUserClaims { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual CMKO_TaxCatigories CMKO_TaxCatigories { get; set; }
         public virtual Devision Devision1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMKO_Optimization> CMKO_Optimization { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMKO_Optimization> CMKO_Optimization1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMKO_Optimization> CMKO_Optimization2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMKO_TaxFact> CMKO_TaxFact { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMKO_Teach> CMKO_Teach { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMKO_Teach> CMKO_Teach1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMKO_Teach> CMKO_Teach2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMKO_Teach> CMKO_Teach3 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CMKO_WorkerResultThisPeriod> CMKO_WorkerResultThisPeriod { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CMO2_Order> CMO2_Order { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

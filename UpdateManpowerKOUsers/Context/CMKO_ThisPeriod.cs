@@ -12,11 +12,8 @@ namespace UpdateManpowerKOUsers.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class View_RKD_ListDespatching
+    public partial class CMKO_ThisPeriod
     {
-        public Nullable<int> id { get; set; }
-        public Nullable<int> PlanZakaz { get; set; }
-        public Nullable<System.DateTime> dateEvent { get; set; }
-        public string text { get; set; }
+        public string periodThisReport { get; set; }
     }
 }
