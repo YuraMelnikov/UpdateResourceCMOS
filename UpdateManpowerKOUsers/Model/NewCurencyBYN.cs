@@ -8,8 +8,8 @@ namespace UpdateManpowerKOUsers.Model
 {
     class NewCurencyBYN
     {
-        string firstPath = "http://www.nbrb.by/api/exrates/rates/145?onDate=";
-        string lastPath = "&Periodicity=0";
+        readonly string firstPath = "http://www.nbrb.by/api/exrates/rates/145?onDate=";
+        readonly string lastPath = "&Periodicity=0";
 
         public NewCurencyBYN()
         {
