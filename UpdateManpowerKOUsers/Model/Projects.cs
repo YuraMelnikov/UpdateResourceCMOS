@@ -129,7 +129,7 @@ namespace UpdateManpowerKOUsers.Model
         
         public void RenameTasks()
         {
-            DateTime dateTimeControl = new DateTime(2018, 1, 1);
+            DateTime dateTimeControl = new DateTime(2018, 9, 26);
             var list = _dbPortal.RenameTasksKBM.ToList();
             var projCollection = projContext.LoadQuery(projContext.Projects.Where(d => d.CreatedDate > dateTimeControl));
             projContext.ExecuteQuery();
