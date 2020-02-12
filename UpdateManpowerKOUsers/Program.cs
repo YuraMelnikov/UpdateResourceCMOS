@@ -6,6 +6,7 @@ namespace UpdateManpowerKOUsers
     {
         static void Main(string[] args)
         {
+            NewCurencyBYN curencyBYN = new NewCurencyBYN();
             Projects prj = new Projects();
             //prj.RenameTasks();
             prj.SetPSAMInProjectName();
@@ -14,7 +15,6 @@ namespace UpdateManpowerKOUsers
             ProjectResourceManpower projectResourceManpower = new ProjectResourceManpower(excelFile.DataInExcel);
             projectResourceManpower.UpdateManpower();
             prj.UpdateCriticalDateClose();
-            NewCurencyBYN curencyBYN = new NewCurencyBYN();
         }
     }
 }

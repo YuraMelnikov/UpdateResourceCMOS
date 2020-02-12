@@ -21,19 +21,26 @@ namespace UpdateManpowerKOUsers.Model
                 {
                     for (DateTime i = lastDateCurrency.AddDays(1); lastDateCurrency < lastPoin; i = i.AddDays(1))
                     {
-                        string dateForPath = i.Year.ToString() + "-" + i.Month.ToString() + "-" + i.Day.ToString();
-                        var httpWebRequest = (HttpWebRequest)WebRequest.Create(firstPath + dateForPath + lastPath);
-                        httpWebRequest.ContentType = "text/json";
-                        httpWebRequest.Method = "GET";//Можно GET
-                        var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                        var streamReader = new StreamReader(httpResponse.GetResponseStream());
-                        var result = streamReader.ReadToEnd();
-                        CurencyBYN curencyBYN = new CurencyBYN();
-                        curencyBYN.date = i;
-                        string curencyString = result.Substring(result.IndexOf("OfficialRate\":") + 14).Replace("}", "").Replace(".", ",");
-                        curencyBYN.USD = Convert.ToDouble(curencyString);
-                        db.CurencyBYN.Add(curencyBYN);
-                        db.SaveChanges();
+                        try
+                        {
+                            string dateForPath = i.Year.ToString() + "-" + i.Month.ToString() + "-" + i.Day.ToString();
+                            var httpWebRequest = (HttpWebRequest)WebRequest.Create(firstPath + dateForPath + lastPath);
+                            httpWebRequest.ContentType = "text/json";
+                            httpWebRequest.Method = "GET";//Можно GET
+                            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                            var streamReader = new StreamReader(httpResponse.GetResponseStream());
+                            var result = streamReader.ReadToEnd();
+                            CurencyBYN curencyBYN = new CurencyBYN();
+                            curencyBYN.date = i;
+                            string curencyString = result.Substring(result.IndexOf("OfficialRate\":") + 14).Replace("}", "").Replace(".", ",");
+                            curencyBYN.USD = Convert.ToDouble(curencyString);
+                            db.CurencyBYN.Add(curencyBYN);
+                            db.SaveChanges();
+                        }
+                        catch
+                        {
+                            break;
+                        }
                     }
                 }
             }
