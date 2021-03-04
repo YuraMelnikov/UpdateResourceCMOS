@@ -6,15 +6,22 @@ namespace UpdateManpowerKOUsers
     {
         static void Main(string[] args)
         {
-            NewCurencyBYN curencyBYN = new NewCurencyBYN();
+            try
+            {
+                NewCurencyBYN curencyBYN = new NewCurencyBYN();
+            }
+            catch
+            {
+            }
             Projects prj = new Projects();
-            //prj.RenameTasks();
+            ////prj.RenameTasks();
             prj.SetPSAMInProjectName();
             ExcelFile excelFile = new ExcelFile();
-            excelFile.UploadDataInListDataInExcel();
+            excelFile.UploadDataInListDataInExcel("Расчет коэф. КБМ");
+            excelFile.UploadDataInListDataInExcel("Расчет коэф. КБЭ");
             ProjectResourceManpower projectResourceManpower = new ProjectResourceManpower(excelFile.DataInExcel);
             projectResourceManpower.UpdateManpower();
-            prj.UpdateCriticalDateClose();
+            //prj.UpdateCriticalDateClose();
         }
     }
 }

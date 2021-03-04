@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace UpdateManpowerKOUsers.Model
@@ -7,16 +8,15 @@ namespace UpdateManpowerKOUsers.Model
     class ExcelFile
     {
         readonly string pathFileRP = "M:\\Katek\\Pror&D\\Archive\\Предразработка\\Прогноз по выработке нормо-часов.xlsm";
-        readonly string nameListExcel = "Расчет коэф. КБМ";
         List<DataInExcel> dataInExcel = new List<DataInExcel>();
-        Excel.Application ObjWorkExcel = new Excel.Application();
 
         internal List<DataInExcel> DataInExcel { get => dataInExcel; set => dataInExcel = value; }
 
-        public void UploadDataInListDataInExcel()
+        public void UploadDataInListDataInExcel(string listName)
         {
+            Excel.Application ObjWorkExcel = new Excel.Application();
             Excel.Workbook ObjWorkBook = ObjWorkExcel.Workbooks.Open(pathFileRP, 0, true, 5, "", "", false, Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
-            Excel.Worksheet ObjWorkSheet = (Excel.Worksheet)ObjWorkBook.Sheets[nameListExcel];
+            Excel.Worksheet ObjWorkSheet = (Excel.Worksheet)ObjWorkBook.Sheets[listName];
             string textData = "";
             int column = 4;
             int row = 2;
@@ -60,6 +60,12 @@ namespace UpdateManpowerKOUsers.Model
                 column += 3;
                 row = 2;
             }
+
+            //ObjWorkBook.Close();
+            ObjWorkExcel.Quit();
+
+            //Marshal.ReleaseComObject(ObjWorkBook);
+            Marshal.ReleaseComObject(ObjWorkExcel);
         }
 
         DataExcel[] GetDefaultDataInExcel(string userName)
